@@ -1,9 +1,9 @@
 import { ss } from '@/utils/storage'
 
-const LOCAL_NAME = 'chatStorage'
+const LOCAL_NAME = 'drawStorage'
 
 export function defaultState(): Chat.ChatState {
-  const uuid = 1002
+  const uuid = 2001
   return {
     img: '',
     taskId: '',

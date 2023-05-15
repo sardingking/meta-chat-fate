@@ -1,7 +1,10 @@
 import type { AxiosProgressEvent } from 'axios'
 import { post } from '@/utils/request'
 import { useAuthStore } from '@/store'
-
+const base = {
+  model: import.meta.env.VITE_GLOB_API_MODEL,
+  baseUrl: import.meta.env.VITE_GLOB_API_URL,
+}
 export function fetchChatConfig<T = any>() {
   return post<T>({
     url: '/gpt/config',
@@ -20,11 +23,6 @@ export async function fetchChatAPIProcess<T = any>(
     myProp: any[]
   },
 ) {
-  const base = {
-    model: import.meta.env.VITE_GLOB_API_MODEL,
-    baseUrl: import.meta.env.VITE_GLOB_API_URL,
-  }
-
   try {
     const token = useAuthStore().token || ''
     const url = `${base.baseUrl}/gpt/index/chat/sse`
