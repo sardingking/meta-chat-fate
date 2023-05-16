@@ -46,7 +46,7 @@ onMounted(() => {
       </h2>
       <div class="p-2 space-y-2 rounded-md bg-neutral-100 dark:bg-neutral-700">
         <p>
-          这里是AI跳动，如需要进一步使用 请联系泽少， 微信:luke100sun
+          这里是AI跳动，如需要进一步使用 请联系泽少， 微信:18554851921
         </p>
       </div>
       <p>{{ $t("setting.api") }}：{{ config?.apiModel ?? '-' }}</p>
